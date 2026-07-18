@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giver | ผู้ให้ที่ไม่เคยหวังสิ่งตอบแทน</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Kanit:wght@200;300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-heart">
+    <svg viewBox="0 0 32 29" fill="none">
+      <path d="M16 29C16 29 0 19.5 0 9.5C0 3 4.5 0 9 0C12 0 14.5 1.7 16 4.5C17.5 1.7 20 0 23 0C27.5 0 32 3 32 9.5C32 19.5 16 29 16 29Z" fill="url(#lg)"/>
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="29"><stop stop-color="#7C5CFF"/><stop offset="1" stop-color="#00D9FF"/></linearGradient></defs>
+    </svg>
+  </div>
+  <div class="loader-text">GIVER</div>
+</div>
+
+<div id="progress-bar"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <canvas id="stars-canvas"></canvas>
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-content">
+    <span class="eyebrow">A Quiet Kind of Strength</span>
+    <h1 class="hero-title">Giver</h1>
+    <p class="hero-sub">ผู้ให้ที่ไม่เคยหวังสิ่งตอบแทน</p>
+    <p class="hero-quote">"บางครั้ง...
+คนที่ดูเข้มแข็งที่สุด
+คือคนที่กำลังแบกความรู้สึกของทุกคนไว้
+โดยไม่มีใครรู้เลยว่าพวกเขาก็เหนื่อย"</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="document.getElementById('boundary').scrollIntoView({behavior:'smooth'})">เรียนรู้เพิ่มเติม</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('who').scrollIntoView({behavior:'smooth'})">ดูเรื่องราว</button>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><div class="line"></div></div>
+</section>
+
+<!-- ================= WHO IS GIVER ================= -->
+<section id="who">
+  <div class="glass-card reveal">
+    <span class="section-eyebrow">Chapter 01</span>
+    <h2 class="section-title">Giver หรือ ผู้ให้ คือใคร?</h2>
+    <p>ผู้ให้ คือคนที่มีความสุขจากการได้ช่วยเหลือผู้อื่น เมื่อเห็นใครกำลังทุกข์ เศร้า หรือกำลังเจอปัญหา ก็มักจะเป็นคนแรกที่เดินเข้าไปถามว่า</p>
+    <span class="quote-line">"เป็นอะไรรึเปล่า"</span>
+    <span class="quote-line">"อยากระบายไหม"</span>
+    <span class="quote-line">"ไม่เป็นไรนะ เดี๋ยวมันก็ผ่านไป"</span>
+    <p>แม้จะช่วยแก้ปัญหาไม่ได้ทั้งหมด แต่เพียงการรับฟัง ก็ทำให้อีกฝ่ายรู้สึกว่าไม่ได้อยู่คนเดียว</p>
+  </div>
+  <div class="who-visual reveal reveal-delay-2">
+    <div class="heart-glow-wrap">
+      <svg viewBox="0 0 200 200" fill="none">
+        <path d="M100 175C100 175 20 125 20 65C20 32 45 15 70 15C85 15 97 24 100 40C103 24 115 15 130 15C155 15 180 32 180 65C180 125 100 175 100 175Z"
+              stroke="url(#hg)" stroke-width="2" fill="rgba(124,92,255,0.08)"/>
+        <defs><linearGradient id="hg" x1="20" y1="15" x2="180" y2="175"><stop stop-color="#7C5CFF"/><stop offset="0.5" stop-color="#00D9FF"/><stop offset="1" stop-color="#9CFFB8"/></linearGradient></defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEELINGS ================= -->
+<section id="feelings">
+  <div class="feel-lines">
+    <p class="feel-line reveal-line">บ่อยครั้งที่สิ่งที่คนรอบข้างมองเห็นจาก Giver</p>
+    <p class="feel-line reveal-line">มีเพียงรอยยิ้ม</p>
+    <p class="feel-line reveal-line">ความอบอุ่น</p>
+    <p class="feel-line reveal-line">และความพร้อมที่จะเป็น Safe Zone ให้กับทุกคน</p>
+    <p class="feel-line reveal-line glow" style="margin-top:40px;">แต่ลึกลงไปในใจ</p>
+    <p class="feel-line reveal-line glow">ผู้ให้หลายคนกำลังซ่อนความกลัวไว้</p>
+    <p class="feel-line reveal-line" style="margin-top:40px;">กลัวว่า...</p>
+    <p class="feel-line reveal-line whisper">"ถ้าวันหนึ่งเราไม่มีแรงแล้ว"</p>
+    <p class="feel-line reveal-line whisper">"คนอื่นจะยังอยู่กับเราไหม"</p>
+    <p class="feel-line reveal-line" style="margin-top:40px;">เพราะเหตุนี้ ผู้ให้จึงเลือกเก็บความเจ็บปวดของตัวเองไว้</p>
+    <p class="feel-line reveal-line glow">แล้วสวมกอดความทุกข์ของคนอื่นแทน</p>
+  </div>
+</section>
+
+<!-- ================= TRUTH ================= -->
+<section id="truth">
+  <p class="truth-line reveal-line">Saying <span class="hl">No</span><br>ไม่ได้แปลว่าใจร้าย</p>
+  <p class="truth-line reveal-line">การ<span class="hl">พักผ่อน</span><br>ไม่ได้แปลว่าเห็นแก่ตัว</p>
+</section>
+
+<!-- ================= BOUNDARY ================= -->
+<section id="boundary">
+  <div style="text-align:center;">
+    <span class="section-eyebrow reveal" style="display:block;">Chapter 02</span>
+    <h2 class="section-title reveal">การเป็นผู้ให้ที่มีความสุข</h2>
+  </div>
+  <div class="boundary-grid">
+    <div class="b-card reveal reveal-delay-1">
+      <span class="b-icon">❤️</span>
+      <h3>รู้จักขีดจำกัดของตัวเอง</h3>
+      <p>ไม่จำเป็นต้องช่วยทุกคนเสมอไป</p>
+    </div>
+    <div class="b-card reveal reveal-delay-2">
+      <span class="b-icon">🌱</span>
+      <h3>พักผ่อนอย่างเต็มที่</h3>
+      <p>ผู้ให้ก็ควรได้รับการดูแลเช่นกัน</p>
+    </div>
+    <div class="b-card reveal reveal-delay-3">
+      <span class="b-icon">🛡</span>
+      <h3>สร้างขอบเขตที่ดี</h3>
+      <p>ไม่ใช่ทุกปัญหาจะเป็นหน้าที่ของเรา</p>
+    </div>
+    <div class="b-card reveal reveal-delay-4">
+      <span class="b-icon">✨</span>
+      <h3>ใจดีกับตัวเอง</h3>
+      <p>ให้ความรักกับตัวเอง เท่ากับที่ให้กับคนอื่น</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESSAY ================= -->
+<section id="essay">
+  <div class="essay-card reveal">
+    <p>บ่อยครั้งที่สิ่งที่คนรอบข้างมองเห็นจาก Giver มีเพียงรอยยิ้ม ความอบอุ่น และความพร้อมที่จะเป็น "เซฟโซน" ให้คนอื่นเสมอ แต่ลึกลงไปในใจของผู้ให้อาจมีความกลัวซ่อนอยู่ — กลัวว่าถ้าวันหนึ่งตัวเองหมดพลัง หรือไม่มีประโยชน์แล้ว คนอื่นจะยังรักและอยู่เคียงข้างพวกเขาไหม</p>
+    <p>ความกลัวนี้ทำให้ Giver หลายคนเลือกที่จะเก็บซ่อนความอ่อนแอของตัวเองไว้ แล้วสวมกอดความทุกข์ของคนอื่นแทน</p>
+
+    <span class="essay-quote">แต่ในความเป็นจริงแล้ว "การปฏิเสธไม่ได้แปลว่าเราใจร้าย และการพักผ่อนไม่ได้แปลว่าเราเห็นแก่ตัว"</span>
+
+    <p>การเป็น Giver ที่ยั่งยืนและมีความสุขอย่างแท้จริง คือการเรียนรู้ที่จะสร้างขอบเขต (Boundary) ให้กับตัวเอง รู้ว่าตอนไหนควรยื่นมือเข้าไปช่วย และตอนไหนควรปล่อยให้เป็นเรื่องของโชคชะตาหรือการเติบโตของเขาเอง</p>
+
+    <p>ที่สำคัญที่สุดคือ การใจดีกับตัวเองให้เท่ากับที่ใจดีกับคนอื่น เพราะ<span class="essay-bucket">ถังน้ำที่ว่างเปล่า ย่อมไม่สามารถแบ่งปันน้ำให้ใครดื่มประทังความกระหายได้</span></p>
+
+    <div class="essay-bucket-visual">
+      <svg viewBox="0 0 64 64" fill="none">
+        <path d="M10 20H54L48 56C47.6 58.2 45.7 60 43.4 60H20.6C18.3 60 16.4 58.2 16 56L10 20Z" stroke="#00D9FF" stroke-width="2" fill="rgba(0,217,255,0.06)"/>
+        <ellipse cx="32" cy="20" rx="22" ry="6" stroke="#7C5CFF" stroke-width="2" fill="rgba(124,92,255,0.08)"/>
+        <path class="bucket-water" d="M17 34C22 31 27 31 32 34C37 37 42 37 47 34L45 52C44.6 53.5 43.3 54.5 41.8 54.5H22.2C20.7 54.5 19.4 53.5 19 52L17 34Z" fill="url(#water)"/>
+        <defs><linearGradient id="water" x1="17" y1="34" x2="47" y2="54"><stop stop-color="#00D9FF" stop-opacity="0.7"/><stop offset="1" stop-color="#9CFFB8" stop-opacity="0.5"/></linearGradient></defs>
+      </svg>
+    </div>
+
+    <p>สุดท้ายแล้ว โลกนี้ไม่ได้ต้องการผู้ให้ที่ยอมแตกสลายเพื่อเติมเต็มคนอื่น แต่ต้องการผู้ให้ที่อิ่มเอมและมีความสุข เพื่อที่จะส่งต่อพลังบวกนั้นออกไปได้เรื่อย ๆ อย่างไม่มีวันหมดต่างหาก</p>
+  </div>
+</section>
+
+<!-- ================= CLOSING ================= -->
+<section id="closing">
+  <p class="closing-line reveal-line">โลกนี้</p>
+  <p class="closing-line reveal-line">ไม่ได้ต้องการผู้ให้ ที่ยอมแตกสลาย เพื่อเติมเต็มทุกคน</p>
+  <p class="closing-line reveal-line" style="margin-top:24px;">แต่ต้องการ</p>
+  <p class="closing-line strong reveal-line">ผู้ให้ที่มีความสุข</p>
+  <p class="closing-line strong reveal-line">ผู้ให้ที่เต็มเปี่ยม</p>
+  <p class="closing-line strong reveal-line">และผู้ให้ที่ยังมีแรง</p>
+  <p class="closing-line reveal-line" style="margin-top:24px;">เพื่อส่งต่อความอบอุ่นนั้น ให้กับโลกได้ต่อไป</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <svg class="footer-heart" viewBox="0 0 32 29" fill="none">
+    <path d="M16 29C16 29 0 19.5 0 9.5C0 3 4.5 0 9 0C12 0 14.5 1.7 16 4.5C17.5 1.7 20 0 23 0C27.5 0 32 3 32 9.5C32 19.5 16 29 16 29Z" fill="url(#fg)"/>
+    <defs><linearGradient id="fg" x1="0" y1="0" x2="32" y2="29"><stop stop-color="#7C5CFF"/><stop offset="1" stop-color="#9CFFB8"/></linearGradient></defs>
+  </svg>
+  <p>"อย่าลืมใจดีกับตัวเอง
+เหมือนที่ใจดีกับคนอื่น"</p>
+  <div class="footer-credit">GIVER — A SPACE FOR THOSE WHO GIVE</div>
+</footer>
+
+<div id="scroll-top">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
